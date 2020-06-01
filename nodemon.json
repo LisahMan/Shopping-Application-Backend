@@ -1,0 +1,5 @@
+{
+    "env" : {
+        "ATLAS_PASSWORD" : "projectx-password"
+    }
+}
