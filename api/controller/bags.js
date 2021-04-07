@@ -165,6 +165,10 @@ exports.bag_shop = (req, res, next) => {
 			});
 		});
  
-        export.errorFunction = {abc};
+        exports.errorFunction = {
+            try{
+
+            
+        };
 
 };
