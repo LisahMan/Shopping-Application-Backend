@@ -92,6 +92,7 @@ exports.bag_shop = (req, res, next) => {
 	const abc = 2;
 	abc = 3;
 	try {
+		a;
 	}
 	let pipeline = [
 		{
