@@ -145,6 +145,7 @@ exports.bag_shop = (req, res, next) => {
 		{ $unwind: '$product' },
 	];
 
+
 	Bag.aggregate(pipeline)
 		.sort({ count: -1 })
 		.exec()
@@ -163,4 +164,7 @@ exports.bag_shop = (req, res, next) => {
 				error: error,
 			});
 		});
+ 
+        export.errorFunction = {};
+
 };
