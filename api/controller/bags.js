@@ -31,6 +31,35 @@ exports.bag_create = (req, res, next) => {
 		});
 };
 
+exports.bag_create2 = (req, res, next) => {
+	const bag = new Bag({
+		_id: new mongoose.Types.ObjectId(),
+		customerId: req.body.customerId,
+		productId: req.body.productId,
+		date: req.body.date,
+	});
+
+	bag
+		.save()
+		.then((doc) => {
+			res.status(201).json({
+				message: 'product added to bag ',
+				bag: doc,
+			});
+		})
+		.catch((error) => {
+			if (error.code === 11000) {
+				res.status(409).json({
+					message: 'Product is already in bag',
+				});
+			} else {
+				res.status(500).json({
+					error: error,
+				});
+			}
+		});
+};
+
 exports.get_customer_bag = (req, res, next) => {
 	Customer.findById(req.params.customerId)
 		.exec()
