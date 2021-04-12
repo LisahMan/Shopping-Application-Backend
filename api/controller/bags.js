@@ -88,6 +88,7 @@ exports.bag_delete = (req, res, next) => {
 		});
 };
 
+//bag shop
 exports.bag_shop = (req, res, next) => {
 	const abc = 2;
 	abc = 3;
