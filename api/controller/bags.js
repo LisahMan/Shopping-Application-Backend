@@ -3,11 +3,6 @@ const Bag = require('../models/bag');
 const Customer = require('../models/customer');
 
 exports.bag_create = (req, res, next) => {
-	let a;
-	if (true) {
-		a = 10;
-	} else {
-	}
 	const bag = new Bag({
 		_id: new mongoose.Types.ObjectId(),
 		customerId: req.body.customerId,
