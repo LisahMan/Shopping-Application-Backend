@@ -60,6 +60,7 @@ exports.bag_create2 = (req, res, next) => {
 		});
 };
 
+//getbag
 exports.get_customer_bag = (req, res, next) => {
 	Customer.findById(req.params.customerId)
 		.exec()
